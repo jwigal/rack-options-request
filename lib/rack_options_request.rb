@@ -8,5 +8,5 @@ rescue LoadError
   raise "rack is required for rack-options-request, try: gem install rack"
 end
 
-# require 'rack/options/request'
-# ActionController::Dispatcher.middleware.use Rack::Options::Request
+require 'rack/options/request'
+#ActionController::Dispatcher.middleware.use Rack::Options::Request
