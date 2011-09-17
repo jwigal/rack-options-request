@@ -4,7 +4,6 @@
 * Email:      spam*@*codeofficer*dot*com
 * Github:     http://github.com/CodeOfficer/rack-options-request/
 
-
 Have you seen exceptions like this before?
 
 "ActionController::NotImplemented: Only requests are allowed."

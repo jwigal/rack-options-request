@@ -6,8 +6,9 @@ module Rack
       end                
 
       def call(env)
-        env["HTTP_ACCEPT"] ="text/html" if env["HTTP_ACCEPT"] == "text/*"
-        @app.call(env)   
+        h = env["HTTP_ACCEPT"]
+        env["HTTP_ACCEPT"] = "text/html" if h == "text/*"
+        @app.call(env)
       end
     end
   end

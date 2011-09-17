@@ -9,6 +9,5 @@ rescue LoadError
 end
 
 require 'rack/options/request'
-#require File.join(File.dirname(__FILE__), *%w[rack options request])
-
-#ActionController::Dispatcher.middleware.use Rack::Options::Request
+require 'rack/options/bot'
+require 'rack/options/railtie' if defined?(::Rails::Railtie)
