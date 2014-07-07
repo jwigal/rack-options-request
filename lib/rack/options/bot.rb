@@ -7,7 +7,7 @@ module Rack
 
       def call(env)
         h = env["HTTP_ACCEPT"]
-        env["HTTP_ACCEPT"] = "text/html" if h && (h =~ /(text\/\*|\*\/\*)/)
+        env["HTTP_ACCEPT"] = "text/html" if h && (h =~ /^(text\/\*|\*\/\*)$/)
         @app.call(env)
       end
     end
